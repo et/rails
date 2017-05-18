@@ -18,10 +18,6 @@ class PerRequestDigestCacheTest < ActiveSupport::TestCase
       class Customer < Struct.new(:name, :id)
         extend ActiveModel::Naming
         include ActiveModel::Conversion
-
-        def cache_key
-          [ name, id ].join("/")
-        end
       end
     RUBY
 
